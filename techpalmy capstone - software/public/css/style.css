@@ -1,0 +1,308 @@
+
+/* App Layout Changes */
+#myBox .card{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+	border: 0;
+	height: 200px;
+}
+#myBox .card:hover{
+	background-color: #98ccae;
+	cursor: pointer;
+}
+#myBox #eventCard{
+	height:160px;
+	margin-bottom: 0rem!important;
+}
+
+#showCard{
+	background-color: #e3f0e8;
+	padding-left: 25px;
+	padding-bottom: 25px;
+}
+#showCard .card-title{
+	padding-top: 30px;
+}
+
+#JobsCarouselDiv{
+	background-color: #cae2d5;
+	border: 1px solid #207a45;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-height: 270px;
+}
+#JobsCarouselDiv #myCarousel{
+	height: 200px;
+}
+#JobsCarouselDiv .card{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+#JobsCarouselDiv .card:hover{
+	background-color: #98ccae;
+	cursor: pointer;
+}
+
+#consultantsCarouselDiv{
+	background-color: #cfcfcf;
+	border: 1px solid #343A40;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-height: 270px;
+}
+#consultantsCarouselDiv #myCarousel{
+	height: 200px;
+}
+#consultantsCarouselDiv .card{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+#consultantsCarouselDiv .card:hover{
+	background-color: #98ccae;
+	cursor: pointer;
+}
+
+#CompaniesCarouselDiv{
+	background-color: #cae2d5;
+	border: 1px solid #207a45;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-height: 681px;
+}
+#CompaniesCarouselDiv .card{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+#CompaniesCarouselDiv .card:hover{
+	background-color: #98ccae;
+	cursor: pointer;
+}
+
+#EventsCarouselDiv{
+	background-color: #cfcfcf;
+	border: 1px solid #343A40;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-height: 270px;
+}
+#EventsCarouselDiv #myCarousel{
+	height: 200px;
+}
+#EventsCarouselDiv .card{
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+#EventsCarouselDiv .card:hover{
+	background-color: #98ccae;
+	cursor: pointer;
+}
+
+#MainSection{
+	background-color: #F2F9F5;
+}
+
+#NoneFoundP{
+	padding-left: 25px;
+}
+
+
+
+.card1 {
+	display: block;
+	color: black;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+	padding: 10px 10px;
+	margin-top: 10px;
+}
+
+h2.companies {
+	border-collapse: separate;
+	border-spacing: 10px;
+	padding: 10px;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+}
+
+.spacer1 {
+	height: 30px;
+	width: 100%;
+	clear: both;
+}
+
+h1.centered {
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+	/* show 3 items */
+	.carousel-inner .active,
+	.carousel-inner .active + .carousel-item,
+	.carousel-inner .active + .carousel-item + .carousel-item {
+	  display: block;
+	}
+  
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+	.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+	  transition: none;
+	}
+  
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+	  position: relative;
+	  transform: translate3d(0, 0, 0);
+	}
+  
+	.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	  position: absolute;
+	  top: 0;
+	  right: -33.3333%;
+	  z-index: -1;
+	  display: block;
+	  visibility: visible;
+	}
+  
+	/* left or forward direction */
+	.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+	.carousel-item-next.carousel-item-left + .carousel-item,
+	.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+	.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+	  position: relative;
+	  transform: translate3d(-100%, 0, 0);
+	  visibility: visible;
+	}
+  
+	/* farthest right hidden item must be abso position for animations */
+	.carousel-inner .carousel-item-prev.carousel-item-right {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: -1;
+	  display: block;
+	  visibility: visible;
+	}
+  
+	/* right or prev direction */
+	.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+	.carousel-item-prev.carousel-item-right + .carousel-item,
+	.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+	.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+	  position: relative;
+	  transform: translate3d(100%, 0, 0);
+	  visibility: visible;
+	  display: block;
+	  visibility: visible;
+	}
+  }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	outline: black;
+	background-color: white;
+	border-radius: 50%;
+	-moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.carousel-control-next-icon:after{
+  font-size: 55px;
+  color: #38c172;
+}
+
+.carousel-control-prev-icon:after {
+  font-size: 55px;
+  color: #38c172;
+}
+
+/*  SIDEBAR STYLING */
+
+#Sidebar {
+	padding: 0;
+	background-color: #343A40;
+	min-height: 100vh;
+}
+
+.sidebar {
+	width: 100%;
+	
+}
+
+.sidebar ul{
+	padding: 0;
+}
+
+.sidebar ul li {
+	list-style-type: none;
+}
+
+.sidebar ul li p{
+	border: 0;
+	margin: 0;
+}
+
+.sidebar .sidebar-section .nav-link {
+	width: 100%;
+	padding-right: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #38c172;
+}
+
+.sidebar .sidebar-section li{
+	font-size: 18px;
+}
+
+.sidebar .sidebar-section .nav-link:hover {
+	color: #2d995b;
+}
+
+.sidebar .sidebar-section .nav-item #StudentsDropdown:hover{
+	color: #2d995b;
+}
+
+
+/* Index Styling */
+
+#CarouselDiv {
+	padding: 0;
+}
+
+#CarouselDiv .HELLO{
+	padding: 0;
+}
+
+/* Information Page Styling */
+
+#infoPageCard{
+	height: 200px;
+	margin: 5px;
+}
+
+/* Terms and Conditions Modal */
+#TermsAndConditionsModal{
+	margin: auto;
+}

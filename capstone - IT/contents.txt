@@ -1,0 +1,4 @@
+itproject - instance creation scripts
+configsite - moodle installation scripts
+awsalarm - cost alert script
+selectionsite - website code for students to select instances

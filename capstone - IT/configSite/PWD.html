@@ -1,0 +1,24 @@
+<html>
+<title>Change Password</title>
+<body><center>
+<form action="cgi-bin/Forget_PWD.py" method="POST">
+<!--Forget_PWD.py -->
+    your name:<br><input type="text"  name="name" value="" required="required" size=20 ><br>
+    your emali:<br><input type="email" id="email" name="email" value="" required="required" size=20>
+    <br><br>
+    Student new password:<br><input type="text" name="moodle_pwd" value="" size=20 ><br>
+    (Password should have both letter and number and longer than 8)
+    (the password you want to change)
+    <br><br>
+    student new ftp password:<br><input type="text" name="ftp_pwd" value="" size=20><br>
+    (the passWord should longer than 6)<br>
+    <br>
+
+    <input type="submit" id="sbutton" value="Get verification code"  >
+    <br>
+<!--<br><input type="submit" value="submit"  >-->
+
+</form>
+
+</center></body>
+</html>

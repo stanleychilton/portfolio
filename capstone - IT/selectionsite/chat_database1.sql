@@ -1,0 +1,3 @@
+ ALTER DATABASE chat CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+  
+ ALTER TABLE chat_message CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;

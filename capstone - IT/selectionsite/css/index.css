@@ -1,0 +1,76 @@
+#sides{
+	background-color: #004289;
+}
+#main{
+	background-color: #004289;
+}
+.round3 {
+  border: 2px solid #E4A024;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: white;
+  padding-bottom: 10px;
+}
+body{
+	background-color: #004289;
+}
+.button{
+	float: right;
+    margin-right:10px;
+	background-color: #004289;
+	border: none;
+	color: #E4A024;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	text-decoration:none;
+}
+.button:active, .button:hover{
+	color: #E4A024;
+}
+p{
+	color: white;
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #004289;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #0767CF;
+  text-decoration: none;
+  color: white;
+}
+
+a.active {
+  background-color: #E4A024;
+  text-decoration: none;
+  color: white;
+}

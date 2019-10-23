@@ -1,0 +1,117 @@
+body {
+	width: 100%;
+	background-image: url("Website Background img.jpg");
+	text-align:center;
+}
+
+/* Listing card div css for displaying items in a list*/
+.card {
+	display: block;
+	color: black;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+	padding: 10px 10px;
+	margin-top: 10px;
+}
+
+.listing h1{
+	border-collapse: separate;
+	border-spacing: 10px;
+	padding: 10px;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+}
+
+.spacer1 {
+	height: 60px;
+	width: 100%
+	clear: both;
+}
+
+body .Navbar{
+	width: 100%;
+	height: 50px;
+	
+	background-color: #2c74e8;
+	border-style: solid;
+	border-color: #1156c4;
+	border-width: 2px;
+	
+}
+
+body .Navbar p{
+}
+
+.Navbar tr{
+}
+
+.Navbar tr td{
+	background-color: #dbe9ff;
+	border-style: solid;
+	border-color: #2c74e8;
+	border-width: 2px;
+	
+	
+}
+body .Navbar #Home{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	display: inline;
+	
+	padding: 15px;
+}
+body .Navbar #Search{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	display: inline;
+	
+	padding: 15px;
+}
+body .Navbar #LoginSignup{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	display: inline;
+	
+	padding: 15px;
+}
+
+
+/* Add a formatting effect for listings */
+/*.listing {
+	display: block;
+	color: black;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+	padding: 20px 10px;
+	margin-top: 20px;
+}*/
+
+/*.listing div{
+	border-collapse: separate;
+	border-spacing: 10px;
+	padding: 10px;
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+	background-color: white;
+}*/
+
+/*.listing tr{	
+}
+
+.listing tr th {
+	padding: 6px 10px;
+}
+
+.listing tr td {
+	padding: 6px 10px;
+}*/
