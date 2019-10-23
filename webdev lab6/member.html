@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="display"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "memberdata.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var oldNode, newNode, nodeList, txt, name, party, state, xmlDoc;
+    xmlDoc = xml.responseXML;
+    txt = "";
+    
+    name = xmlDoc.getElementsByTagName("namelist");
+    state = xmlDoc.getElementsByTagName("state");
+    
+    oldNode = xmlDoc.getElementsByTagName('member')[name.length-1];
+    newNode = oldNode.cloneNode(true);
+    xmlDoc.documentElement.appendChild(newNode);
+
+  // Output the names, party, and state for each member of parliment  
+    for (i = 0; i < name.length; i++) {
+      if (name[i].childNodes[0] != null)
+        txt += i + " "  + name[i].childNodes[0].nodeValue + " ("+ state[i].attributes.getNamedItem("postal-code").nodeValue + ")" + "<br>";
+      else
+
+        txt += "vacant <br>";
+    }
+    document.getElementById("display").innerHTML = txt; 
+}
+</script>
+
+</body>
+</html>
+
+

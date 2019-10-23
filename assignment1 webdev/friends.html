@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="myForm">
+      <label for="newfriend">add friend:</label>
+      <input id="newfriend" name="name" placeholder="input friends name">
+      <input id="newfriend" name="ipaddress" placeholder="input friends ip address">
+      <input type="submit" value="Post!">
+    </form>
+    <script>
+        window.addEventListener("load", function () {
+      function sendData() {
+        var XHR = new XMLHttpRequest();
+
+        var FD = new FormData(form);
+
+        XHR.open("POST", "/addfriend");
+
+        XHR.send(FD);
+      }
+
+      var form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        sendData();
+      });
+    });
+    </script>
+    <script>
+        window.addEventListener("load", function () {
+      function sendData() {
+        var XHR = new XMLHttpRequest();
+
+        var FD = new FormData(form);
+
+        XHR.open("POST", "/likepost");
+
+        XHR.send(FD);
+      }
+
+      var form = document.getElementById("likeForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        sendData();
+      });
+    });
+    </script>

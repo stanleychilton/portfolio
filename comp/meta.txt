@@ -1,0 +1,5 @@
+import sys
+d = {}
+for line in sys.stdin:
+	inp = line.split()
+	print(inp)

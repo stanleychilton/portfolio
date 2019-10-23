@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Bus Stop data </h2>
+
+<p id="display"></p>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        JSObj = JSON.parse(this.responseText);
+        document.getElementById("display").innerHTML = JSObj.type;
+    }
+};
+xmlhttp.open("GET", "busstop.json", true);
+xmlhttp.send();
+
+</script>
+
+</body>
+</html>

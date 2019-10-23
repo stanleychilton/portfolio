@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="myForm">
+      <label for="myUpdate">update status:</label>
+      <input id="myUpdate" name="newstatus" placeholder="input something">
+      <input type="submit" value="Post!">
+    </form>
+    <script>
+        window.addEventListener("load", function () {
+      function sendData() {
+        var XHR = new XMLHttpRequest();
+
+        // Bind the FormData object and the form element
+        var FD = new FormData(form);
+
+        // Set up our request
+        XHR.open("POST", "/statusupdate");
+
+        // The data sent is what the user provided in the form
+        XHR.send(FD);
+      }
+
+      // Access the form element...
+      var form = document.getElementById("myForm");
+
+      // ...and take over its submit event.
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        sendData();
+      });
+    });
+    </script>
+
+
+<p id="display"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "status.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var nodeList, post, message, date, time, likes, xmlDoc;
+    xmlDoc = xml.responseXML;
+    txt = "";
+
+    message = xmlDoc.getElementsByTagName("message");
+    date = xmlDoc.getElementsByTagName("date");
+    time = xmlDoc.getElementsByTagName("time");
+    likes = xmlDoc.getElementsByTagName("likes");
+
+
+
+  // Output the names, party, and state for each member of parliment
+    for (i = 0; i < message.length; i++) {
+      if (message[i].childNodes[0] != null)
+        txt += "<p style='margin: 0 0 0px;'>"  + time[i].childNodes[0].nodeValue + "</p><p style='margin: 0 0 0px;'> "
+        + date[i].childNodes[0].nodeValue + "</p><p style='margin: 0 0 0px;'> "
+        + message[i].childNodes[0].nodeValue + "</p><p style='margin: 0 0 0px;'>" + likes[i].childNodes[0].nodeValue + "</p><br>";
+      else
+        txt += i + " VACANT <br>"
+    }
+    document.getElementById("display").innerHTML = txt;
+}
+</script>
+
+
+</body>
+</html>

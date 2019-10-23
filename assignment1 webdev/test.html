@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="display"></p>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        JSObj = JSON.parse(this.responseText);
+        console.log(JSObj.friends.length);
+        for (i = 0; i < JSObj.friends.length; i++) {
+            name = JSObj.friends[i].name;
+            xhttp1.open("GET", "temp"+ i +".xml", true);
+            xhttp1.send();
+};
+};
+};
+
+
+var xhttp1 = new XMLHttpRequest();
+xhttp1.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this, name);
+    }
+};
+
+
+
+
+function myFunction(xml, name) {
+    var nodeList, post, message, date, time, xmlDoc;
+    xmlDoc = xml.responseXML;
+    txt = "";
+
+    message = xmlDoc.getElementsByTagName("message");
+    date = xmlDoc.getElementsByTagName("date");
+    time = xmlDoc.getElementsByTagName("time");
+    console.log(message.length);
+
+  // Output the names, party, and state for each member of parliment
+    if (message[message.length-1].childNodes[0] != null)
+        txt += "<p style='margin: 0 0 0px;'>"  + name + "</p><p style='margin: 0 0 0px;'>"+time[message.length-1].childNodes[0].nodeValue + "</p><p style='margin: 0 0 0px;'> "
+        + date[message.length-1].childNodes[0].nodeValue + "</p><p style='margin: 0 0 0px;'> "
+        + message[message.length-1].childNodes[0].nodeValue + "</p><br>";
+    else
+        txt += i + " VACANT <br>";
+    document.getElementById("display").innerHTML = txt;
+}
+
+
+
+
+
+xmlhttp.open("GET", "friends.json", true);
+xmlhttp.send();
+
+</script>
+
+
+
+
+</body>
+</html>

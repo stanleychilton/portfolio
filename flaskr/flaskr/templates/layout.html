@@ -1,0 +1,44 @@
+<!doctype html>
+<title>Clicker</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<script async src="{{ url_for('static', filename='validitiy.js') }}"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9006258879887861",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"> -->
+<div class=page>
+  <h1>Clicker</h1>
+  <div class=metanav>
+  {% if not session.logged_in %}
+      <a href="{{ url_for('create_account') }}">Create account</a>
+      -
+      <a href="{{ url_for('login') }}">log in</a>
+  {% else %}
+    <a href="{{ url_for('logout') }}">log out</a>
+    -
+    <a href="{{ url_for('profile') }}">profile</a>
+    -
+    <a href="{{ url_for('show_entries') }}">feed</a>
+  {% endif %}
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  <div align="center">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- left sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9006258879887861"
+     data-ad-slot="4887891039"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+  {% block body %}{% endblock %}
+</div>

@@ -1,0 +1,3 @@
+default = None
+
+print(default)

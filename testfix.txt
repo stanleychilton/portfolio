@@ -1,0 +1,7 @@
+for item in checklist();
+	hashcheck = createFileSignature(os.path.join(myArchive, "objects", item))
+	if hashcheck != item:
+		shutil.copy(os.path.join(path, item), os.path.join(myArchive, "objects", item), os.path.join(path, item), os.path.join(myArchive, "objects", hashcheck[1]))
+		for i in d:
+			if d[i] == item:
+				d[key] = hashcheck[1]

@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Login</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <p class=error></p>
+  <form action="{{ url_for('create_account') }}" method=POST>
+    <dl>
+      <dt>Firstname:
+      <dd><input type=text name=firstname pattern="[^'\x22]+[A-Za-z]+[^'\x22]{4,}" required
+                 oninvalid="check_fname()"
+                 oninput="setCustomValidity('')">
+      <dt>Lastname:
+      <dd><input type=text name=lastname pattern="[^'\x22]+[A-Za-z]+[^'\x22]{4,}"  required
+                 oninvalid="check_lname()"
+                 oninput="setCustomValidity('')">
+      <dt>Username:
+      <dd><input type=text name=username pattern="[^'\x22]+{3,}"  required
+                 oninvalid="check_username()"
+                 oninput="setCustomValidity('')">
+      <dt>Email:
+      <dd><input type=email name="email" pattern="[^'\x22]+"  required
+                 oninvalid="check_email()"
+                 oninput="setCustomValidity('')">
+        <br><br>
+      <dt>Password:
+      <dd><input type=password name=password pattern="[^'\x22]+"  required
+                 oninvalid="check_pass()"
+                 oninput="setCustomValidity('')">
+      <dt>Re-enter Password:
+      <dd><input type=password name=repassword pattern="[^'\x22]+"  required
+                 oninvalid="check_pass()"
+                 oninput="setCustomValidity('')">
+      <br><br>
+      <dt>I accept the terms and conditions:
+      <dd><input type="checkbox" name="myCheck" required>
+      <br><br>
+      <dd><input type=submit value=sign-up>
+
+    </dl>
+  </form>
+{% endblock %}
