@@ -1,0 +1,173 @@
+textarea{  
+  display: block;
+  box-sizing: padding-box;
+  overflow: hidden;
+  padding: 10px;
+  width: 250px;
+  font-size: 14px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(black, .3);
+  border: 0;
+}
+#menustyle {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #187586;
+	overflow: hidden;
+    font-family: Arial;
+}
+#menulayout {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #4cb5c3;
+}
+
+li a.active {
+    background-color: #4cb5c3;
+}
+
+#bodyfield {
+  font-family: Arial;
+  margin: 0;
+  background-color: #87d1db;
+  display:flex; 
+  align-items:center;
+}
+body{
+  font-family: Arial;
+  margin: 0;
+  background-color: #87d1db;
+  display:flex; 
+  align-items:center;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #87d1db;
+  display:flex; 
+  align-items:center;
+  min-height: 100%;
+}
+
+/* Style the header */
+.header {
+	margin: auto;
+	padding: 20px 0px 20px 0px;
+}
+
+
+/* padding top, right, bottom, left */
+#contains{
+	margin: auto;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #a9f3fd;
+}
+#mainfield{
+	height: 100%;
+	width: 100%;
+    background-color: #f1f1f1;
+	/*background-color: #a9f3fd;*/
+}
+#footer{
+	position: sticky;
+	font-family: Arial;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #187586;
+	color: white;
+  width: 100%;
+  height: 5%;
+	bottom:0;
+}
+#chardiv {
+  display: table;
+  font-family: Arial;
+  padding-left: 20px; 
+}
+
+#image {
+  vertical-align: middle;
+  display: table-cell;
+}
+#textdiv {
+  vertical-align: middle;
+  display: table-cell;
+}
+#chardivright {
+  display: table;
+  font-family: Arial;
+  padding-left: 20px; 
+}
+
+#imageright {
+  vertical-align: middle;
+  display: table-cell;
+}
+#textdivright {
+  vertical-align: middle;
+  display: table-cell;
+}
+#addiv{
+	vertical-align: middle;
+	padding: 0px 20px 0px 20px
+}
+#textedit{
+	    font-family: Arial;
+		text-decoration: none;
+		color: white;
+}
+#texteditb{
+		text-decoration: none;
+		color: black;
+}
+.pure-g {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#testtable{
+	table-layout: fixed;
+	width: 100%;
+}
+#testtr{
+}
+.testtd:hover{
+	background-color: #3ea4b7;
+}
+#testa{
+	color: inherit;
+	text-decoration:none;
+	display:block;
+	width:100%;
+	height:100%;
+	padding: 5px;
+}
+#centeralign{
+	text-align: center;
+	padding-top: 20px;
+}
+#menu_image{
+	display: block;
+	margin: auto;
+	width: 25px;
+	height: 25px;
+
+}
+#image_div{
+	padding-right: 7px;
+	float: left;
+}

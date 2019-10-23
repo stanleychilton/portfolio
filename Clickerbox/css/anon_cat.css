@@ -1,0 +1,23 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:hover{
+    background-color:  #bfbfbf;
+}
+td{
+    font-weight: normal;
+    text-align: left;
+}
+td a{
+    color: inherit;
+    text-decoration:none;
+    display:block;
+    width:100%;
+    height:100%;
+    padding: 20px;
+}

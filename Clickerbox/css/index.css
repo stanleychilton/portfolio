@@ -1,0 +1,24 @@
+#maintable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.maintr:nth-child(even) {
+    background-color: #dddddd;
+}
+.maintrhover:hover{
+    background-color:  #bfbfbf;
+}
+#maintd{
+    font-weight: normal;
+    text-align: left;
+}
+#maintda{
+	color: inherit;
+	text-decoration:none;
+	display:block;
+	width:100%;
+	height:100%;
+	padding: 20px;
+	color: black;
+}

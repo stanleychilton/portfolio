@@ -1,0 +1,49 @@
+.fakeimg {
+    /*width: 100%;*/
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+	padding: 20px;
+    margin-top: 20px;
+	overflow: auto;
+}
+.warncard {
+    background-color: #DD7A7A;
+	padding: 20px;
+    margin-top: 20px;
+	overflow: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.button {
+    background-color: #187586; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#post_image {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+p {
+    margin: 0 0 0px;
+}
