@@ -3,10 +3,10 @@ import socket
 import time
 
 mydb = mysql.connector.connect(
-    host = '192.168.1.65',
-    user = "clickerboxapp",
-    password = "3GT52ed6SmhEhZm6",
-    database = "clickerbox"
+    host = '',
+    user = "",
+    password = "",
+    database = ""
 
 )
 
